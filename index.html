@@ -256,12 +256,16 @@ const CHARS=[
 /* ---------- level generation ---------- */
 const TOTAL=100, PER=20;
 const CHAPTERS=[
-  {name:'Gerbang Lumut',sub:'Awal sebuah legenda',boss:'EVIL WIZARD'},
-  {name:'Hutan Duri',sub:'Semak berduri dan mata yang mengintai',boss:'THORN WIZARD'},
-  {name:'Gua Berbisik',sub:'Suara-suara dari kegelapan',boss:'CAVE WIZARD'},
-  {name:'Rawa Berkabut',sub:'Kabut tebal, monster raksasa',boss:'SWAMP WIZARD'},
-  {name:'Jantung Hollow',sub:'Pertarungan terakhir',boss:'ARCH WIZARD'}
+  {name:'Gerbang Lumut',sub:'Awal sebuah legenda',boss:'PENJAGA GERBANG',bn:'Penjaga',shard:{name:'Ametis',col:'#b070ff'}},
+  {name:'Hutan Duri',sub:'Semak berduri dan mata yang mengintai',boss:'RATU DURI',bn:'Ratu Duri',shard:{name:'Ambar',col:'#ffb030'}},
+  {name:'Gua Berbisik',sub:'Suara-suara dari kegelapan',boss:'PENYIHIR GEMA',bn:'Gema',shard:{name:'Safir',col:'#4aa0ff'}},
+  {name:'Rawa Berkabut',sub:'Kabut tebal, monster raksasa',boss:'RAJA RAWA',bn:'Raja Rawa',shard:{name:'Zamrud',col:'#30e090'}},
+  {name:'Jantung Hollow',sub:'Pertarungan terakhir',boss:'RAJA HOLLOW',bn:'Raja Hollow',shard:{name:'Rubi',col:'#ff3050'}}
 ];
+const STORY=[{"intro": [["", "Di tepi Hutan Hollow, cahaya fajar padam sejak Kristal Fajar pecah menjadi lima serpihan."], ["Lumi", "Aku Lumi, kunang-kunang penjaga cahaya. Hanya kamu yang masih sanggup membawa api lentera ini."], ["Lumi", "Serpihan pertama dibawa Penjaga Gerbang. Ayo, lewati lumut-lumut ini dan temukan dia!"]], "outro": [["", "Penjaga Gerbang tumbang. Serpihan Ametis kembali bersinar di tanganmu."], ["Lumi", "Satu dari lima! Tapi lihat... duri-duri tumbuh di hutan sebelah. Kegelapan terus menyebar."]], "taunt": "Cahaya tak punya tempat di sini. Pergi!", "defeat": "Gerbang itu... akhirnya terbuka.", "lv": ["Lentera menyala kecil. Langkah pertama menembus lumut Gerbang.", "Jejak lumpur masih segar. Seseorang lewat sebelum kita.", "Lumi: Ada slime di depan! Dulu mereka jinak.", "Reruntuhan pos jaga, ditinggalkan terburu-buru.", "Kamu menemukan catatan: 'Kristal retak, kegelapan keluar.'", "Jamur bercahaya makin redup. Kegelapan mulai menjalar.", "Jembatan tua berderit. Lumi menyuruhmu cepat.", "Sarang jamur menjerit memanggil teman-temannya.", "Di balik semak, kamu menemukan jalan pintas menuju gerbang.", "Setengah jalan. Gerbang Lumut terlihat di kejauhan.", "Kabut tipis turun. Ada suara langkah yang mengikutimu.", "Seorang penjaga yang terkorupsi menghadang, matanya ungu.", "Lumi: Serpihan Ametis berdenyut makin kencang!", "Akar-akar bergerak sendiri, menutup jalan lama.", "Kamu melewati patung penyihir tua yang retak.", "Lumi: Jangan berhenti. Fajar tinggal menunggu.", "Pintu batu pertama terbuka sedikit demi sedikit.", "Tangga menuju menara gerbang. Udara terasa dingin.", "Di balik gerbang, bayangan besar sudah menunggu.", "Penjaga Gerbang berdiri di singgasana lumut. Rebut serpihan pertama!"]}, {"intro": [["", "Serpihan Ametis menunjuk ke timur, ke Hutan Duri, tempat semak tumbuh liar tak terkendali."], ["Lumi", "Dulu Ratu Duri merawat hutan ini. Sekarang duri-durinya melukai siapa saja yang lewat."], ["Lumi", "Serpihan Ambar ada padanya. Awas, tanah di sini bisa menumbuhkan duri tiba-tiba!"]], "outro": [["", "Ratu Duri jatuh berlutut. 'Maafkan aku... kegelapan itu datang dari bawah tanah.'"], ["", "Serpihan Ambar hangat di genggamanmu. Dua serpihan sudah terkumpul."], ["Lumi", "Gua di bawah hutan... kita harus turun ke sana."]], "taunt": "Duri-duriku akan menjagamu... selamanya.", "defeat": "Terima kasih... sudah mengingatkanku.", "lv": ["Hutan Duri menyambut dengan semak yang bergerak sendiri.", "Duri-duri baru tumbuh di jejak langkahmu.", "Lumi: Hati-hati, tiap semak bisa melukai.", "Kamu menemukan boneka kayu penjaga hutan, sudah hancur.", "Bunga hitam mekar. Dulu bunganya berwarna emas.", "Suara tangis dari balik pohon... ternyata hanya angin.", "Jalan setapak penuh jebakan akar.", "Para peri hutan bersembunyi, ketakutan.", "Seekor peri menunjuk arah: 'Ratu ada di hutan terdalam.'", "Setengah hutan terlewati. Duri makin tinggi.", "Kamu menemukan taman milik Ratu yang sudah layu.", "Lumi: Serpihan Ambar... aku bisa merasakannya!", "Pohon raksasa tumbang menutup jalan. Cari jalan lain.", "Kerumunan monster berpatroli seperti tentara.", "Ayunan duri dari dahan, seperti perangkap yang disengaja.", "Prasasti kuno: 'Duri melindungi, bukan melukai.'", "Ratu mulai terdengar, bernyanyi lirih dan sedih.", "Tanah bergetar. Akar-akar bangkit di sekitarmu.", "Gerbang semak terakhir menutup di belakangmu.", "Ratu Duri bangkit dari mahkota durinya. Hentikan dia!"]}, {"intro": [["", "Di bawah Hutan Duri, sebuah gua menganga. Semua suara dikubur di sini, hanya bisikan yang tersisa."], ["Lumi", "Jangan dengarkan bisikan itu. Ikuti cahaya serpihan, dan jaga lentera tetap menyala."], ["Lumi", "Penyihir Gema menyimpan Serpihan Safir. Dia bisa muncul dari kegelapan mana saja."]], "outro": [["", "Gema terakhir sang penyihir menyebut satu nama: Raja Hollow."], ["", "Serpihan Safir bergabung dengan dua lainnya. Tiga serpihan berdenyut serempak."], ["Lumi", "Ujung gua terbuka ke rawa berkabut. Raja Rawa menunggu di baliknya."]], "taunt": "Teriakanmu hanya akan jadi gemaku.", "defeat": "Dengarlah... Hollow menunggumu.", "lv": ["Mulut gua menganga. Bisikan memanggil namamu.", "Cahaya lenteramu bergetar di lorong sempit.", "Lumi: Kristal di dinding... semuanya retak.", "Gema langkahmu terdengar seperti langkah orang lain.", "Jangan percaya bisikan itu: 'Berbaliklah...'", "Jejak penambang lama, tertinggal begitu saja.", "Sungai bawah tanah berkilau biru pucat.", "Stalaktit runtuh di belakangmu. Jalan pulang tertutup.", "Kamu menemukan jurnal: 'Raja Hollow tidak jahat, dia terluka.'", "Setengah perjalanan. Bisikan berubah menjadi nyanyian.", "Jembatan batu tipis di atas jurang tanpa dasar.", "Lumi: Serpihan Safir sudah dekat. Rasanya dingin.", "Ruang kristal memantulkan bayanganmu ke mana-mana.", "Salah satu bayangan itu bergerak sendiri.", "Penambang hantu melambaikan tangan, lalu lenyap.", "Lorong gelap total. Hanya lentera yang menuntun.", "Bisikan menyebut satu nama, berulang-ulang: Hollow.", "Dinding gua berdenyut seperti jantung.", "Aula Gema terbuka, luas dan sunyi.", "Penyihir Gema muncul dari kegelapan. Hanya cahaya yang tersisa!"]}, {"intro": [["", "Gua berakhir di sebuah rawa. Kabut tebal menelan jalan setapak dan air berbau racun."], ["Lumi", "Raja Rawa tumbuh sebesar gunung sejak menelan Serpihan Zamrud. Dia lambat, tapi sangat kuat."], ["Lumi", "Hati-hati dengan genangan racunnya. Jangan berdiri di tempat yang sama terlalu lama!"]], "outro": [["", "Rawa perlahan menjernih. Serpihan Zamrud berkilau hijau, empat dari lima sudah di tanganmu."], ["Lumi", "Tinggal satu. Jantung Hollow... di sanalah semua ini bermula."]], "taunt": "Rawa ini lapar... dan kamu santapannya.", "defeat": "Rawa... kembali jernih...", "lv": ["Gua berakhir di rawa. Kabut menelan segalanya.", "Air hitam bergelembung dekat kakimu.", "Lumi: Kabut ini beracun. Jangan berhenti lama-lama.", "Gubuk apung tua, penghuninya sudah lama pergi.", "Katak raksasa mengamatimu dari balik lumpur.", "Suara lonceng dari kejauhan. Siapa yang masih di sini?", "Kamu menyelamatkan sebuah lentera yang hanyut.", "Pohon bakau menjulang, akarnya seperti kaki raksasa.", "Jejak besar di lumpur. Sangat besar.", "Setengah rawa. Kabut mulai menipis, sedikit saja.", "Rumah kunang-kunang yang sudah padam.", "Lumi bersinar lebih terang melihat teman-temannya.", "Rawa bergetar. Sesuatu yang raksasa bergerak di bawahnya.", "Pulau lumpur terapung. Pijakannya mulai rapuh.", "Troll rawa berbaris menjaga jalan utama.", "Lumi: Serpihan Zamrud bersinar di sana, di balik kabut!", "Kabut makin tebal, kamu hanya melihat bayangan besar.", "Gelembung racun meledak di segala arah.", "Pintu rawa terakhir, tertutup lumut tebal.", "Raja Rawa bangkit dari lumpur, sebesar gunung!"]}, {"intro": [["", "Langit memerah. Jantung Hollow berdenyut di kejauhan, dan keempat serpihan bergetar di sakumu."], ["Lumi", "Raja Hollow adalah penjaga pertama, sahabat cahaya. Kristal yang retak membuatnya tersesat dalam kegelapan."], ["Raja Hollow", "Pergilah... sebelum aku kehilangan kendali..."], ["Lumi", "Kita tidak akan pergi. Kita akan menyelamatkannya, dan fajar akan kembali!"]], "outro": [["", "Lima serpihan melayang dan menyatu. Kristal Fajar utuh kembali, dan cahayanya menembus kegelapan."], ["Raja Hollow", "Cahaya... aku ingat sekarang. Terima kasih, penjaga lentera."], ["", "Untuk pertama kalinya setelah seribu malam, fajar terbit di atas Hutan Hollow."], ["Lumi", "Perjalananmu selesai. Terima kasih sudah menjaga cahaya. TAMAT."]], "taunt": "Kenapa kamu bertahan... aku hanya ingin tidur.", "defeat": "Cahaya... aku ingat sekarang.", "lv": ["Langit memerah. Jantung Hollow berdenyut di kejauhan.", "Lumi: Empat serpihan bersinar bersamaan di sakumu.", "Pohon-pohon di sini bercahaya merah, seperti darah.", "Reruntuhan kota para penyihir, ditelan kegelapan.", "Prasasti: 'Raja Hollow, penjaga pertama, sahabat cahaya.'", "Bayangan para penyihir terdahulu menghadangmu.", "Kilasan masa lalu: Raja Hollow menangis di depan kristal yang retak.", "Lumi: Dia tidak ingin menyakiti siapa pun.", "Kegelapan di sini bergerak seperti tubuh yang hidup.", "Setengah jalan ke jantung. Dentumannya terasa di dada.", "Monster terkuat berpatroli di setiap tikungan.", "Serpihan di sakumu bergetar, memohon untuk dipersatukan.", "Jembatan tulang melintasi lautan cahaya merah.", "Raja Hollow berbisik: 'Pergilah... sebelum aku lepas kendali.'", "Lumi: Kita tidak akan pergi. Kita akan menolongnya.", "Pilar kristal gelap menjulang, retak di semua sisi.", "Tangga terakhir menuju singgasana.", "Dinding bergemuruh. Kegelapan ingin kamu mundur.", "Pintu singgasana terbuka. Tak ada jalan kembali.", "Raja Hollow berdiri sebagai bayangan sang penjaga pertama. Ini pertarungan terakhir!"]}];
+const storyLine=i=>STORY[chOf(i)].lv[lvOf(i)];
+function beatOf(i){ const t=storyLine(i); return /^Lumi: /.test(t)?{who:'Lumi',txt:t.slice(6)}:{who:'',txt:t}; }
+
 const THEMES=[
  {sky:['#04141a','#0b2b2e','#071a17'],shaft:'140,255,200',fly:'200,255,140',far:['#06121c',.62],mid:['#0b2a2a',.45],hill:['#031512',.55],vine:['#03140f',.35],card:['#1d5b45','#0c2b30'],boss:null,grade:null,aura:'170,80,255'},
  {sky:['#170f05','#2a2410','#1a1608'],shaft:'255,210,120',fly:'255,220,120',far:['#1a1004',.62],mid:['#2e2208',.5],hill:['#150e03',.55],vine:['#1a1204',.4],card:['#5a4a1c','#2b1e0c'],boss:['#e08a20',.32],grade:['#d88a20',.30],aura:'255,170,60'},
@@ -297,7 +301,7 @@ function cfgFor(i,x){
   // each level gets its own small enemy "kit"
   const KR=mulberry(seed*7+3), sh=a=>{a=a.slice();for(let k=a.length-1;k>0;k--){const j=Math.floor(KR()*(k+1));[a[k],a[j]]=[a[j],a[k]];}return a;};
   const kit=sh(pool).slice(0,3); const flyKit=t<.25?['BloodshotEye']:sh(flyPool).slice(0,KR()<.6?2:1);
-  const name=boss?'Singgasana '+CHAPTERS[c].boss.split(' ')[0]:st.title+' '+MODS[(c*20+l*7)%MODS.length];
+  const name=boss?'Singgasana '+CHAPTERS[c].bn:st.title+' '+MODS[(c*20+l*7)%MODS.length];
   const out={name:x?'Harian · '+name:name,seed,len:boss?1500+c*100:2000+l*95+c*180,t,boss,ch:c,style:styleIdx,st,kit,flyKit,pool,flyPool,
     desc:boss?'Hadapi penyihir penjaga bab ini':st.desc};
   if(!x) _cfg[i]=out; return out;
@@ -454,7 +458,7 @@ function layerPass(list,par,cam,seed,spacing,anchorY,scale,alpha){
 }
 
 /* ---------- game state ---------- */
-const S={mode:'menu',sel:0,t:0,level:0,lives:3,score:0,coins:0,gems:0,L:null,P:null,boss:null,bproj:[],cam:0,shake:0,parts:[],proj:[],flies:[],ui:[],list:[],psel:0,lsel:0,ch:0,chSel:0,chPos:0,enterT:0,drag:null,toast:'',toastT:0,livesStart:3,starsGot:1,bossTinted:false,help:false,fade:1,prevMode:'',paused:false,time:0,msg:'',msgT:0};
+const S={mode:'menu',sel:0,t:0,level:0,lives:3,score:0,coins:0,gems:0,L:null,P:null,boss:null,bproj:[],bz:[],cap:null,story:null,cam:0,shake:0,parts:[],proj:[],flies:[],ui:[],list:[],psel:0,lsel:0,ch:0,chSel:0,chPos:0,enterT:0,drag:null,toast:'',toastT:0,livesStart:3,starsGot:1,bossTinted:false,help:false,fade:1,prevMode:'',paused:false,time:0,msg:'',msgT:0};
 for(let i=0;i<40;i++) S.flies.push({x:Math.random()*VW,y:Math.random()*VH,p:Math.random()*6,s:.3+Math.random()*.7});
 
 /* ---------- save data ---------- */
@@ -524,7 +528,17 @@ function openChapter(c){
   let l=0; while(l<PER-1&&isDone(c*PER+l)) l++; S.lsel=l; go('levels');
 }
 function go(mode){ S.mode=mode; S.paused=false; S.help=false; }
-function startRun(i){ if(i>=TOTAL){go('win');return;} S.daily=null; S.lives=D_().lives; S.score=0; S.coins=0; S.gems=0; loadLevel(i); AC&&AC.resume&&AC.resume(); snd('ck'); }
+function startRun(i){
+  if(i>=TOTAL){go('win');return;}
+  const c=chOf(i);
+  if(lvOf(i)===0&&!(SAVE.seen&&SAVE.seen[c])){ SAVE.seen=SAVE.seen||{}; SAVE.seen[c]=1; persist(); playStory(c,'intro',()=>beginRun(i)); return; }
+  beginRun(i);
+}
+function playStory(c,kind,then){
+  S.story={c,kind,pages:STORY[c][kind],i:0,ch:0,then}; S.daily=null; useTheme(c); go('story');
+}
+function setCap(who,txt,dur=5.5){ S.cap={who,txt,t:dur,dur}; }
+function beginRun(i){ S.daily=null; S.lives=D_().lives; S.score=0; S.coins=0; S.gems=0; loadLevel(i); AC&&AC.resume&&AC.resume(); snd('ck'); }
 function startGame(i=0){ startRun(i); }
 function dailyInfo(){ const d=new Date(), key=d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate(); const R=mulberry(key*7919); let idx=8+Math.floor(R()*88); if(lvOf(idx)===PER-1) idx--; return {key,idx,seed:key%100000+7}; }
 function startDaily(){ S.daily=dailyInfo(); S.lives=D_().lives; S.score=0; S.coins=0; S.gems=0; loadLevel(S.daily.idx); AC&&AC.resume&&AC.resume(); snd('ck'); }
@@ -550,7 +564,10 @@ function activate(id){
     case 'retry': if(S.daily) startDaily(); else startRun(S.level); break;
     case 'lvls': if(S.daily){ go('menu'); break; } S.ch=chOf(S.level); S.lsel=lvOf(S.level); if(S.mode==='clear'&&S.lsel<PER-1) S.lsel++; go('levels'); break;
     case 'menu': go('menu'); break;
-    case 'next': if(S.daily) go('menu'); else startRun(S.level+1); break;
+    case 'next': if(S.daily){ go('menu'); break; } { const Lv=S.level; if(lvOf(Lv)===PER-1) playStory(chOf(Lv),'outro',()=>startRun(Lv+1)); else startRun(Lv+1); } break;
+    case 'snext': { const st=S.story; if(!st) break; const pg=st.pages[st.i]; if(st.ch<pg[1].length){ st.ch=pg[1].length; break; }
+      if(++st.i>=st.pages.length){ const f=st.then; S.story=null; f(); } else st.ch=0; break; }
+    case 'sskip': { const st=S.story; if(!st) break; const f=st.then; S.story=null; f(); break; }
     case 'daily': startDaily(); break;
     case 'shop': go('shop'); break;
     case 'chars': S.cv=S.sel; go('chars'); break;
@@ -565,7 +582,7 @@ function activate(id){
 function loadLevel(i){
   S.level=i; useTheme(chOf(i)); S.L=buildLevel(i,S.daily?S.daily.seed:0); S.hitsLevel=0; S.nextCtl=0; S.mode='play'; S.paused=false; S.help=false; S.pendingSpawn=true; S.time=0; S.parts=[]; S.proj=[];
   S.respawn={x:S.L.start.x,y:S.L.start.y};
-  makePlayer(); spawnEnemies(); S.cam=0; flash(S.daily?S.L.cfg.name:levelName(i)+' · '+S.L.cfg.name,2.4); S.livesStart=S.lives; if(S.L.cfg.boss) bossTint(chOf(i));
+  makePlayer(); spawnEnemies(); S.cam=0; flash(S.daily?S.L.cfg.name:levelName(i)+' · '+S.L.cfg.name,2.4); S.cap=null; if(!S.daily){ const bt=beatOf(i); setCap(bt.who,bt.txt,6); } S.livesStart=S.lives; if(S.L.cfg.boss) bossTint(chOf(i));
   S.levelCoins=S.L.items.filter(i=>i.k==='coin').length; S.coinsStart=S.coins; S.gemsStart=S.gems;
   S.scoreStart=S.score;
 }
@@ -792,7 +809,7 @@ function newEnemy(mon,x,fy,gy,opt){
 }
 function spawnEnemies(){
   const L=S.L;
-  L.solids=L.solids.filter(s=>!s.wall); S.bproj=[];
+  L.solids=L.solids.filter(s=>!s.wall); S.bproj=[]; S.bz=[];
   if(L.cfg.boss) L.goal=null;
   S.boss=makeBoss();
   S.E=L.enemies.map(e=>newEnemy(e.mon,e.x,e.fy,e.gy,e));
@@ -904,12 +921,22 @@ function damageEnemy(e,dmg){
 }
 
 /* ---------- boss: Evil Wizard ---------- */
-const BOSS={cx:62,feet:142,sc:1.5};
+const BOSS={cx:62,feet:142,sc:1.5}, BSC=[1.5,1.45,1.5,1.95,1.75], BHP=[1,1.05,1.1,1.3,1.6];
 function makeBoss(){
-  const A=S.L.arena; if(!A) return null;
-  return {x:A.x+A.w-300,y:GROUND-140,w:70,h:140,vx:0,vy:0,face:-1,hp:Math.round((20+6*chOf(S.level))*D_().bhp),max:Math.round((20+6*chOf(S.level))*D_().bhp),k:1+.07*chOf(S.level),c:chOf(S.level),state:'sleep',t:0,cd:1.2,inv:0,flash:0,phase:1,fired:0,dealt:false,deadT:0,done:false,variant:'orb',onGround:false,hitT:0};
+  const A=S.L.arena; if(!A) return null; const c=chOf(S.level), sc=BSC[c], r=sc/1.5, hp=Math.round((20+6*c)*BHP[c]*D_().bhp);
+  const w=Math.round(70*r), h=Math.round(140*r);
+  return {x:A.x+A.w-300,y:GROUND-h,w,h,vx:0,vy:0,face:-1,hp,max:hp,sc,k:(1+.07*c)*(c===3?.82:1),c,state:'sleep',t:0,cd:1.2,inv:0,flash:0,phase:1,fired:0,dealt:false,deadT:0,done:false,variant:'orb',onGround:false,hitT:0};
 }
-function bossEnd(B){ B.state='idle'; B.t=0; B.cd=((B.phase===2?.7:1.3)+Math.random()*.7)/B.k; }
+function pickAtk(B){
+  const p=B.phase,c=B.c,o=[],few=S.E.filter(e=>e.dead===0).length<3;
+  if(c===0){ o.push('orb','orb'); if(p>=2) o.push('rain'); }
+  else if(c===1){ o.push('thorns','thorns','orb'); if(p>=2) o.push('fan','thorns'); }
+  else if(c===2){ o.push('rocks','rocks','orb'); if(p>=2) o.push('wave','rocks'); }
+  else if(c===3){ o.push('glob','glob','orb'); if(few) o.push('summon'); if(p>=2) o.push('wave','glob'); }
+  else { o.push('orb','fan'); if(p>=2) o.push('wave','rocks','beam'); if(p>=3) o.push('beam','thorns'); if(few) o.push('summon'); }
+  return o[Math.floor(Math.random()*o.length)];
+}
+function bossEnd(B){ B.state='idle'; B.t=0; B.cd=((B.phase>=2?.7:1.3)+Math.random()*.7)/B.k; }
 function bossTint(c){
   const T=THEMES[c]&&THEMES[c].boss; if(!T) return;
   for(const a of ['idle','run','atk1','atk2','death','hit','jump','fall']){ const n='boss_'+a,k=n+'@'+c; if(!IMG[k]&&IMG[n]){ IMG[k]=tint(IMG[n],T[0],T[1]); META[k]=META[n]; } }
@@ -918,7 +945,7 @@ function damageBoss(d){
   const B=S.boss; if(!B||B.inv>0||B.state==='sleep'||B.state==='intro'||B.state==='dead') return false;
   B.hp-=d; B.inv=.14; B.flash=.2; S.shake=Math.max(S.shake,.12); snd('stomp');
   burst(B.x+B.w/2,B.y+B.h/2,12,'#c070ff',200,.5,3);
-  if(B.hp<=0){ B.hp=0; B.state='dead'; B.deadT=0; B.vx=0; S.bproj=[]; S.score+=500; snd('kill'); burst(B.x+B.w/2,B.y+B.h/2,50,'#d090ff',300,1,5); S.shake=.6; }
+  if(B.hp<=0){ B.hp=0; B.state='dead'; B.deadT=0; B.vx=0; S.bproj=[]; S.bz=[]; S.score+=500; snd('kill'); burst(B.x+B.w/2,B.y+B.h/2,50,'#d090ff',300,1,5); S.shake=.6; }
   else if((B.state==='idle'||B.state==='walk')&&Math.random()<.5){ B.state='hit'; B.hitT=0; }
   return true;
 }
@@ -928,30 +955,30 @@ function updateBoss(dt){
   if(B.state==='dead'){
     B.deadT+=dt;
     if(!B.done&&B.deadT>1.4){
-      B.done=true; L.solids=L.solids.filter(s=>!s.wall); L.goal=L.goalPos; snd('win'); flash('Boss dikalahkan!',2.5);
+      B.done=true; L.solids=L.solids.filter(s=>!s.wall); L.goal=L.goalPos; snd('win'); flash('Boss dikalahkan!',2.5); setCap(CHAPTERS[B.c].bn,STORY[B.c].defeat,5);
       for(let i=0;i<10;i++) L.items.push({k:'coin',x:B.x+B.w/2-100+i*22,y:GROUND-40-Math.sin(i/9*Math.PI)*60});
       L.items.push({k:'gem_b',x:B.x+B.w/2-40,y:GROUND-110},{k:'gem_r',x:B.x+B.w/2,y:GROUND-130},{k:'gem_g',x:B.x+B.w/2+40,y:GROUND-110},{k:'potion',x:B.x+B.w/2,y:GROUND-60});
     }
     return;
   }
   if(B.state==='sleep'){
-    if(!P.dead&&P.x>A.x+150){ B.state='intro'; B.t=0; L.solids.push({x:A.x+10,y:-500,w:40,h:940,wall:true}); flash(CHAPTERS[chOf(S.level)].boss,2.4); S.shake=.4; snd('die'); }
+    if(!P.dead&&P.x>A.x+150){ B.state='intro'; B.t=0; L.solids.push({x:A.x+10,y:-500,w:40,h:940,wall:true}); flash(CHAPTERS[chOf(S.level)].boss,2.4); setCap(CHAPTERS[chOf(S.level)].bn,STORY[chOf(S.level)].taunt,5); S.shake=.4; snd('die'); }
     return;
   }
   if(B.state==='intro'){ if(B.t>1.6){B.state='idle';B.t=0;} return; }
-  B.phase=B.hp<=B.max/2?2:1;
+  B.phase=B.c===4?(B.hp<=B.max/3?3:B.hp<=B.max*2/3?2:1):(B.hp<=B.max/2?2:1);
   const dx=(P.x+P.w/2)-(B.x+B.w/2);
   B.vy=Math.min(900,B.vy+1800*dt);
   if(B.state==='idle'||B.state==='walk'||B.state==='hit'){
     B.face=dx>=0?1:-1;
     if(B.state==='hit'){ B.hitT+=dt; B.vx=0; if(B.hitT>.3) B.state='idle'; }
-    else { const sp=(B.phase===2?125:88)*B.k; const want=Math.abs(dx)>110?B.face*sp:0; B.vx=want; B.state=want?'walk':'idle'; }
+    else { const sp=(B.phase>=2?125:88)*B.k; const want=Math.abs(dx)>110*(B.sc/1.5)?B.face*sp:0; B.vx=want; B.state=want?'walk':'idle'; }
     B.cd-=dt;
     if(B.cd<=0&&!P.dead&&B.state!=='hit'){
-      const melee=Math.abs(dx)<210;
-      if(B.c>=1&&B.phase===2&&Math.random()<(melee?.14:.3)){ B.state='port'; B.moved=false; }
+      const rs=B.sc/1.5, melee=Math.abs(dx)<210*rs;
+      if(B.c>=1&&B.c!==3&&B.phase>=2&&Math.random()<(melee?.14:.3)){ B.state='port'; B.moved=false; }
       else if(melee&&Math.random()<.75){ B.state='atk1'; }
-      else { B.state='atk2'; const o=['orb','orb']; if(B.phase===2) o.push('rain'); if(B.c>=2) o.push('fan'); if(B.c>=3) o.push('wave'); if(B.c>=4&&S.E.filter(e=>e.dead===0).length<3) o.push('summon'); B.variant=o[Math.floor(Math.random()*o.length)]; }
+      else { B.state='atk2'; B.variant=pickAtk(B); }
       B.t=0; B.fired=0; B.dealt=false; B.vx=0;
     }
   } else {
@@ -963,7 +990,7 @@ function updateBoss(dt){
     } else if(B.state==='atk1'){
       const fi=Math.floor(B.t/.09);
       if(fi>=3&&fi<=6&&!B.dealt){
-        const box={x:B.face>0?B.x+B.w-20:B.x-190,y:B.y-8,w:210,h:B.h+8};
+        const rs=B.sc/1.5, box={x:B.face>0?B.x+B.w-20*rs:B.x-190*rs,y:B.y-8,w:210*rs,h:B.h+8};
         if(!P.dead&&hit(P,box)){ B.dealt=true; hurtPlayer(P,1,B.x+B.w/2); }
       }
       if(fi>=8) bossEnd(B);
@@ -971,12 +998,24 @@ function updateBoss(dt){
       const fi=Math.floor(B.t/.1);
       const cx=B.x+B.w/2;
       if(B.variant==='orb'){
-        if(fi>=4&&B.fired<1){ B.fired=1; S.bproj.push({x:cx+B.face*90,y:B.y+B.h*.42,vx:B.face*(B.phase===2?380:310)*B.k,vy:0,r:14,kind:'orb',life:4}); snd('shoot'); }
-        if(B.phase===2&&fi>=6&&B.fired<2){ B.fired=2; S.bproj.push({x:cx+B.face*90,y:B.y+B.h*.88,vx:B.face*400*B.k,vy:0,r:12,kind:'orb',life:4}); snd('shoot'); }
+        if(fi>=4&&B.fired<1){ B.fired=1; S.bproj.push({x:cx+B.face*90,y:B.y+B.h*.42,vx:B.face*(B.phase>=2?380:310)*B.k,vy:0,r:14,kind:'orb',life:4}); snd('shoot'); }
+        if(B.phase>=2&&fi>=6&&B.fired<2){ B.fired=2; S.bproj.push({x:cx+B.face*90,y:B.y+B.h*.88,vx:B.face*400*B.k,vy:0,r:12,kind:'orb',life:4}); snd('shoot'); }
       } else if(B.variant==='fan'){
         if(fi>=4&&B.fired<1){ B.fired=1; snd('shoot'); for(const a of [-.32,0,.32]) S.bproj.push({x:cx+B.face*80,y:B.y+B.h*.45,vx:B.face*Math.cos(a)*330*B.k,vy:Math.sin(a)*330*B.k,r:13,kind:'orb',life:4}); }
       } else if(B.variant==='wave'){
         if(fi>=5&&B.fired<1){ B.fired=1; snd('die'); S.shake=Math.max(S.shake,.3); for(const d of (B.c>=4?[-1,1]:[B.face])) S.bproj.push({x:cx+d*70,y:GROUND-16,vx:d*350*B.k,vy:0,r:17,kind:'wave',life:2.8}); }
+      } else if(B.variant==='thorns'){
+        if(fi>=3&&B.fired<1){ B.fired=1; snd('shoot'); const px=P.x+P.w/2, offs=B.phase>=3?[-260,-130,0,130,260]:B.phase>=2?[-200,-100,0,100,200]:[-130,0,130];
+          for(const o of offs) S.bz.push({k:'thorn',x:clamp(px+o-24,A.x+80,L.W-80),w:48,h:105,t:0,tele:.85,dur:.45}); }
+      } else if(B.variant==='rocks'){
+        if(fi>=3&&B.fired<1){ B.fired=1; snd('die'); S.shake=Math.max(S.shake,.25); const px=P.x+P.w/2, n=B.phase>=2?6:4;
+          for(let q=0;q<n;q++){ const xx=q===0?px:px+(Math.random()-.5)*620; S.bz.push({k:'rock',x:clamp(xx,A.x+90,L.W-40),t:q*.12,tele:.95+q*.1}); } }
+      } else if(B.variant==='glob'){
+        if(fi>=4&&B.fired<1){ B.fired=1; snd('shoot'); const g=1000,T=.95,x0=cx+B.face*70,y0=B.y+B.h*.28; const tg=B.phase>=2?[-110,0,110]:[0];
+          for(const o of tg){ const tx=clamp(P.x+P.w/2+o,A.x+90,L.W-40); S.bproj.push({x:x0,y:y0,vx:(tx-x0)/T,vy:((GROUND-16-y0)-.5*g*T*T)/T,g,r:15,kind:'glob',life:3}); } }
+      } else if(B.variant==='beam'){
+        if(fi>=2&&B.fired<1){ B.fired=1; snd('die'); const lane=Math.random()<.5?'low':'high', mk=(ln,tele)=>S.bz.push({k:'beam',lane:ln,x0:A.x+60,x1:L.W,y:ln==='low'?GROUND-34:GROUND-132,h:ln==='low'?34:30,t:0,tele,dur:.55});
+          mk(lane,1.0); if(B.phase>=3) mk(lane==='low'?'high':'low',1.75); }
       } else if(B.variant==='summon'){
         if(fi>=4&&B.fired<1){ B.fired=1; snd('shoot'); for(const d of [-1,1]) { const ex=clamp(cx+d*120,A.x+90,L.W-60); S.E.push(newEnemy('BloodshotEye',ex,GROUND-190,0)); S.E[S.E.length-1].aware=6; S.E[S.E.length-1].bang=.5; burst(ex,GROUND-190,14,'#ff6070',160,.5,3); } }
       } else if(fi>=5&&B.fired<1){
@@ -996,13 +1035,66 @@ function updateBoss(dt){
     else hurtPlayer(P,1,B.x+B.w/2);
   }
 }
+function updateBossZones(dt){
+  const P=S.P; if(!S.bz.length) return;
+  for(const z of S.bz){
+    z.t+=dt;
+    if(z.k==='rock'){ if(!z.sp&&z.t>=z.tele){ z.sp=1; S.bproj.push({x:z.x,y:-30,vx:0,vy:800,r:17,kind:'rock',life:2}); } continue; }
+    if(!z.sd&&z.t>=(z.tele||99)){ z.sd=1; if(z.k==='thorn'){ snd('stomp'); S.shake=Math.max(S.shake,.1); } }
+    if(P.dead) continue; let box=null;
+    if(z.k==='thorn'&&z.t>=z.tele&&z.t<z.tele+z.dur){ const k=Math.min(1,(z.t-z.tele)/.08); box={x:z.x+5,y:GROUND-z.h*k,w:z.w-10,h:z.h*k}; }
+    else if(z.k==='puddle'&&z.t>.3&&z.t<z.life) box={x:z.x+8,y:GROUND-14,w:z.w-16,h:14};
+    else if(z.k==='beam'&&z.t>=z.tele&&z.t<z.tele+z.dur) box={x:z.x0,y:z.y,w:z.x1-z.x0,h:z.h};
+    if(box&&hit(P,box)) hurtPlayer(P,1,box.x+box.w/2);
+  }
+  S.bz=S.bz.filter(z=>z.k==='rock'?z.t<z.tele+.15:z.k==='thorn'?z.t<z.tele+z.dur+.25:z.k==='beam'?z.t<z.tele+z.dur+.1:z.t<z.life);
+}
+function drawBossZones(){
+  for(const z of S.bz){
+    ctx.save();
+    if(z.k==='thorn'){
+      const cx=z.x+z.w/2;
+      if(z.t<z.tele){ ctx.globalAlpha=.25+.5*Math.abs(Math.sin(z.t*14)); ctx.fillStyle='#ffb030'; ctx.beginPath(); ctx.ellipse(cx,GROUND-2,z.w/2+4,6,0,0,6.283); ctx.fill(); }
+      else { const k=Math.min(1,(z.t-z.tele)/.08), h=z.h*k, out=z.t>z.tele+z.dur; if(out) ctx.globalAlpha=Math.max(0,1-(z.t-z.tele-z.dur)/.25);
+        ctx.fillStyle='#4a2e0e'; ctx.strokeStyle='#ffd070'; ctx.lineWidth=2;
+        for(const [fx,fh] of [[.2,.7],[.5,1],[.8,.7]]){ const bx=z.x+z.w*fx; ctx.beginPath(); ctx.moveTo(bx-z.w*.2,GROUND); ctx.lineTo(bx,GROUND-h*fh); ctx.lineTo(bx+z.w*.2,GROUND); ctx.closePath(); ctx.fill(); ctx.stroke(); } }
+    } else if(z.k==='rock'){
+      if(z.t>=0&&z.t<z.tele){ const k=z.t/z.tele; ctx.globalAlpha=.35+.4*k; ctx.fillStyle='#ff5a40'; ctx.beginPath(); ctx.ellipse(z.x,GROUND-2,8+22*k,4+5*k,0,0,6.283); ctx.fill(); ctx.globalAlpha=.18*k; ctx.fillRect(z.x-2,0,4,GROUND); }
+    } else if(z.k==='puddle'){
+      const a=Math.min(1,z.t/.3,(z.life-z.t)/.8); ctx.globalAlpha=Math.max(0,a);
+      const g=ctx.createRadialGradient(z.x+z.w/2,GROUND-4,2,z.x+z.w/2,GROUND-4,z.w/2); g.addColorStop(0,'rgba(170,240,90,.95)'); g.addColorStop(1,'rgba(60,150,40,.5)');
+      ctx.fillStyle=g; ctx.beginPath(); ctx.ellipse(z.x+z.w/2,GROUND-4,z.w/2,9,0,0,6.283); ctx.fill();
+      ctx.fillStyle='#d8ffa0'; for(let q=0;q<4;q++){ const bb=((S.t*1.4+q*.37)%1); ctx.beginPath(); ctx.arc(z.x+14+q*(z.w-28)/3,GROUND-6-bb*20,2.5*(1-bb)+.5,0,6.283); ctx.fill(); }
+    } else if(z.k==='beam'){
+      const W=z.x1-z.x0;
+      if(z.t<z.tele){ ctx.globalAlpha=.22+.3*Math.abs(Math.sin(z.t*12)); ctx.fillStyle='#ff3050'; ctx.fillRect(z.x0,z.y,W,z.h); ctx.globalAlpha=.9; ctx.fillStyle='#ffb0c0'; ctx.fillRect(z.x0,z.y+z.h/2-1,W,2); }
+      else { ctx.globalCompositeOperation='lighter'; const g=ctx.createLinearGradient(0,z.y,0,z.y+z.h); g.addColorStop(0,'rgba(255,60,90,.2)'); g.addColorStop(.5,'rgba(255,240,240,1)'); g.addColorStop(1,'rgba(255,60,90,.2)'); ctx.fillStyle=g; ctx.fillRect(z.x0,z.y,W,z.h); }
+    }
+    ctx.restore();
+  }
+}
+let _DK=null;
+function drawBossDark(){
+  const B=S.boss; if(!B||B.c!==2||B.state==='sleep'||B.state==='dead'||!S.P) return;
+  if(!_DK){ _DK=document.createElement('canvas'); _DK.width=VW; _DK.height=VH; }
+  const d=_DK.getContext('2d'), a=Math.min(1,B.t/1.2);
+  d.globalCompositeOperation='source-over'; d.clearRect(0,0,VW,VH); d.fillStyle=`rgba(0,2,16,${.8*(B.state==='intro'?a:1)})`; d.fillRect(0,0,VW,VH);
+  d.globalCompositeOperation='destination-out';
+  const hole=(x,y,r,al)=>{ const g=d.createRadialGradient(x,y,r*.15,x,y,r); g.addColorStop(0,`rgba(0,0,0,${al})`); g.addColorStop(1,'rgba(0,0,0,0)'); d.fillStyle=g; d.fillRect(x-r,y-r,r*2,r*2); };
+  const P=S.P; hole(P.x+P.w/2-S.cam,P.y+P.h/2,270,1); hole(B.x+B.w/2-S.cam,B.y+B.h*.5,150,.95);
+  for(const b of S.bproj) hole(b.x-S.cam,b.y,70,.9);
+  for(const z of S.bz) if(z.k==='thorn'||z.k==='rock'||z.k==='beam') hole((z.k==='beam'?VW/2:z.x+(z.w||0)/2-S.cam)+(z.k==='beam'?0:0),z.k==='beam'?z.y:GROUND-30,z.k==='beam'?1:70,.0);
+  ctx.drawImage(_DK,0,0);
+}
 function updateBossProj(dt){
-  const P=S.P;
+  const P=S.P; updateBossZones(dt);
   for(const b of S.bproj){
     if(b.g) b.vy+=b.g*dt;
     b.life-=dt; b.x+=b.vx*dt; b.y+=b.vy*dt;
     if(b.own) for(const s of S.L.solids) if(b.x>s.x&&b.x<s.x+s.w&&b.y>s.y&&b.y<s.y+s.h){b.life=0;burst(b.x,b.y,6,'#b0e070',100,.3,2);}
     if(Math.random()<.5) S.parts.push({x:b.x,y:b.y,vx:(Math.random()-.5)*30,vy:(Math.random()-.5)*30,life:.3,max:.3,col:b.kind==='orb'?'#d070ff':b.kind==='spore'?'#a0e060':b.kind==='bone'?'#e8e0c8':'#ff6a8a',size:3,g:0});
+    if(b.kind==='rock'&&b.y>=GROUND-8){ b.life=0; burst(b.x,GROUND-4,12,'#b8b0a0',190,.5,3); S.shake=Math.max(S.shake,.12); }
+    if(b.kind==='glob'&&b.vy>0&&b.y>=GROUND-16){ b.life=0; S.bz.push({k:'puddle',x:b.x-50,w:100,t:0,life:5}); burst(b.x,GROUND-6,14,'#9be05a',170,.5,3); }
     if(b.kind==='rain'&&b.y>=GROUND-6){ b.life=0; burst(b.x,GROUND-4,14,'#ff6a8a',180,.5,3); S.shake=Math.max(S.shake,.1); }
     for(const s of S.L.solids) if(s.wall&&b.x>s.x&&b.x<s.x+s.w){ b.life=0; burst(b.x,b.y,8,'#d070ff',120,.4,3); }
     if(!P.dead){
@@ -1020,9 +1112,9 @@ function drawBoss(){
   else if(B.state==='atk2'){nm='boss_atk2';fi=Math.min(7,Math.floor(B.t/.1));}
   else if(B.state==='hit'){nm='boss_hit';fi=Math.min(2,Math.floor(B.hitT/.1));}
   else if(B.state==='dead'){nm='boss_death';fi=Math.min(6,Math.floor(B.deadT/.18));}
-  const cx=B.x+B.w/2, fy=B.y+B.h+2, flip=B.face>0?false:true, sc=BOSS.sc;
+  const cx=B.x+B.w/2, fy=B.y+B.h+2, flip=B.face>0?false:true, sc=B.sc;
   // aura
-  if(B.state!=='dead'){ctx.save();ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(cx,fy-80,8,cx,fy-80,220);const ph=B.phase===2?'255,70,110':TH.aura;g.addColorStop(0,`rgba(${ph},.35)`);g.addColorStop(1,`rgba(${ph},0)`);ctx.fillStyle=g;ctx.fillRect(cx-230,fy-310,460,460);ctx.restore();}
+  if(B.state!=='dead'){ctx.save();ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(cx,fy-80,8,cx,fy-80,220);const ph=B.phase>=2?'255,70,110':TH.aura;g.addColorStop(0,`rgba(${ph},.5)`);g.addColorStop(1,`rgba(${ph},0)`);ctx.fillStyle=g;ctx.fillRect(cx-230,fy-310,460,460);ctx.restore();}
   ctx.save(); if(B.inv>0&&B.state!=='dead'&&B.state!=='port'&&Math.floor(S.t*30)%2===0) ctx.globalAlpha=.6;
   if(B.state==='port') ctx.globalAlpha=clamp(Math.abs(B.t-.4)/.4,.04,1);
   // sprites face left by default? flip handled so that face>0 is right
@@ -1030,6 +1122,7 @@ function drawBoss(){
   drawFrame(nm2,fi,cx,fy,sc,B.face<0,BOSS.cx,BOSS.feet);
   if(B.flash>0){ctx.globalCompositeOperation='lighter';ctx.globalAlpha=.6;drawFrame(nm2,fi,cx,fy,sc,B.face<0,BOSS.cx,BOSS.feet);}
   ctx.restore();
+  if(B.state!=='dead') drawShardGem(cx,B.y-24+Math.sin(S.t*3)*5,13,CHAPTERS[B.c].shard.col,1);
 }
 function drawBossProj(){
   for(const b of S.bproj){
@@ -1039,6 +1132,11 @@ function drawBossProj(){
     } else if(b.kind==='spore'||b.kind==='bone'){
       const sp=b.kind==='spore'; const g=ctx.createRadialGradient(b.x,b.y,1,b.x,b.y,b.r*2); g.addColorStop(0,sp?'#f4ffd0':'#fffbe8'); g.addColorStop(.5,sp?'#9be05a':'#d8cfa8'); g.addColorStop(1,sp?'rgba(100,200,60,0)':'rgba(200,190,150,0)');
       ctx.fillStyle=g; ctx.fillRect(b.x-b.r*2,b.y-b.r*2,b.r*4,b.r*4);
+    } else if(b.kind==='rock'){
+      ctx.save(); ctx.fillStyle='#8a8478'; ctx.strokeStyle='#d8d0c0'; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(b.x-b.r,b.y); ctx.lineTo(b.x-b.r*.4,b.y-b.r); ctx.lineTo(b.x+b.r*.7,b.y-b.r*.8); ctx.lineTo(b.x+b.r,b.y+b.r*.3); ctx.lineTo(b.x,b.y+b.r); ctx.closePath(); ctx.fill(); ctx.stroke();
+      const g=ctx.createLinearGradient(b.x,b.y-70,b.x,b.y); g.addColorStop(0,'rgba(200,190,170,0)'); g.addColorStop(1,'rgba(200,190,170,.45)'); ctx.fillStyle=g; ctx.fillRect(b.x-b.r*.6,b.y-70,b.r*1.2,70); ctx.restore();
+    } else if(b.kind==='glob'){
+      const g=ctx.createRadialGradient(b.x,b.y,1,b.x,b.y,b.r*1.8); g.addColorStop(0,'#f4ffd0'); g.addColorStop(.45,'#7ad03a'); g.addColorStop(1,'rgba(60,150,30,0)'); ctx.fillStyle=g; ctx.fillRect(b.x-b.r*2,b.y-b.r*2,b.r*4,b.r*4);
     } else if(b.kind==='wave'){
       ctx.save(); ctx.globalCompositeOperation='lighter'; const g=ctx.createRadialGradient(b.x,b.y,2,b.x,b.y,b.r*2.6); g.addColorStop(0,'#fff'); g.addColorStop(.35,'#ff9a60'); g.addColorStop(1,'rgba(255,60,40,0)');
       ctx.fillStyle=g; ctx.fillRect(b.x-b.r*3,b.y-b.r*3-12,b.r*6,b.r*6); ctx.restore();
@@ -1108,7 +1206,7 @@ function menuNav(){
 }
 function syncMusic(){
   if(['play','clear','over'].includes(S.mode)&&S.L){ const B=S.boss; Music.set(chOf(S.level),!!(B&&B.state!=='sleep'&&B.state!=='dead'),false); }
-  else Music.set(S.mode==='chapters'?clamp(Math.round(S.chPos),0,4):0,false,true);
+  else Music.set(S.mode==='chapters'?clamp(Math.round(S.chPos),0,4):(S.mode==='story'&&S.story?S.story.c:0),false,true);
 }
 function update(dt){
   S.t+=dt; syncMusic();
@@ -1143,11 +1241,12 @@ function update(dt){
     return;
   }
   if(S.mode==='chars'){ if(S.cv===undefined) S.cv=S.sel; if(pressed.left) activate('xprev'); if(pressed.right) activate('xnext'); if(pressed.enter||pressed['c:Space']) activate('xpick'); if(pressed.pause) activate('back'); return; }
+  if(S.mode==='story'){ if(!S.story){ go('menu'); return; } S.story.ch+=dt*55; if(pressed.enter||pressed['c:Space']) activate('snext'); if(pressed.pause) activate('sskip'); return; }
   if(S.mode==='shop'||S.mode==='achs'){ menuNav(); if(pressed.pause) activate('back'); return; }
   if(S.mode==='over'||S.mode==='win'||S.mode==='clear'){ menuNav(); if(pressed.pause) activate('lvls'); return; }
   if(pressed.pause){S.paused=!S.paused;S.psel=0;}
   if(S.paused){ menuNav(); return; }
-  S.time+=dt; S.msgT=Math.max(0,S.msgT-dt); S.shake=Math.max(0,S.shake-dt);
+  S.time+=dt; S.msgT=Math.max(0,S.msgT-dt); if(S.cap) S.cap.t-=dt; S.shake=Math.max(0,S.shake-dt);
   const lastLives=S.lives, lastP=S.P;
   updatePlayer(dt);
   if(S.mode!=='play') return;
@@ -1260,6 +1359,7 @@ function drawWorld(){
     if(e.mini&&e.dead===0){ const bw=90; ctx.fillStyle='#000b'; ctx.fillRect(cx-bw/2-2,e.y-22,bw+4,9); ctx.fillStyle='#ff7a5a'; ctx.fillRect(cx-bw/2,e.y-20,bw*e.hp/e.max,5); text('PENJAGA',cx,e.y-32,12,'#ffd0a0','center'); }
     else if(e.max>=3&&e.dead===0&&e.hp<e.max){ctx.fillStyle='#000a';ctx.fillRect(cx-20,e.y-12,40,5);ctx.fillStyle=m.col;ctx.fillRect(cx-20,e.y-12,40*e.hp/e.max,5);}
   }
+  drawBossZones();
   drawBoss();
   drawPlayer();
   drawBossProj();
@@ -1407,11 +1507,18 @@ function drawHUD(){
   if(B&&B.state!=='sleep'&&S.mode==='play'){
     const bw=420,bx=(VW-bw)/2,by=VH-44;
     ctx.fillStyle='#000b'; ctx.beginPath(); ctx.roundRect(bx-4,by-4,bw+8,22,8); ctx.fill();
-    ctx.fillStyle=B.phase===2?'#ff5a7a':'#b070ff'; ctx.fillRect(bx,by,bw*B.hp/B.max,14);
+    ctx.fillStyle=B.phase>=2?'#ff5a7a':CHAPTERS[B.c].shard.col; ctx.fillRect(bx,by,bw*B.hp/B.max,14); if(B.c===4){ ctx.fillStyle='#fff'; ctx.fillRect(bx+bw/3-1,by,2,14); ctx.fillRect(bx+bw*2/3-1,by,2,14); }
     ctx.strokeStyle='#e6d0ff'; ctx.lineWidth=1.5; ctx.strokeRect(bx,by,bw,14);
     text(CHAPTERS[B.c].boss,VW/2,by-16,18,'#e6d0ff','center');
   }
   if(S.msgT>0&&S.mode==='play'&&!S.paused){ ctx.globalAlpha=Math.min(1,S.msgT*2); text(S.msg,VW/2,110,34,'#fff2b8','center'); ctx.globalAlpha=1; }
+  if(S.cap&&S.cap.t>0&&S.mode==='play'&&!S.paused){
+    const cp=S.cap, a=Math.min(1,cp.t*2.5,(cp.dur-cp.t)*4), ls=splitLines(cp.txt,560,16), bh=22+ls.length*21+(cp.who?18:0), by=140;
+    ctx.save(); ctx.globalAlpha=Math.max(0,a); ctx.fillStyle='rgba(3,14,12,.86)'; ctx.strokeStyle=cp.who==='Lumi'?'#ffe39a':cp.who?'#ff9ab0':'#6fb98a'; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.roundRect(VW/2-300,by,600,bh,14); ctx.fill(); ctx.stroke();
+    let yy=by+20; if(cp.who){ text(cp.who,VW/2,yy,14,cp.who==='Lumi'?'#ffe39a':'#ff9ab0','center'); yy+=21; }
+    ls.forEach((l,k)=>text(l,VW/2,yy+k*21,16,'#e6f6d8','center','italic 400')); ctx.restore();
+  }
 }
 /* ---------- UI widgets ---------- */
 function btn(id,x,y,w,h,label,iconName,opt={}){
@@ -1660,7 +1767,7 @@ function drawLevelGrid(){
   ctx.fillStyle='rgba(4,18,15,.9)'; ctx.strokeStyle='#3f7a5c'; ctx.lineWidth=2; ctx.beginPath(); ctx.roundRect(22,452,VW-44,72,16); ctx.fill(); ctx.stroke();
   const cf=cfgFor(i), dn=diffName(i); text(levelName(i)+'  '+cf.name+(boss?'  ·  Boss: '+CHAPTERS[c].boss:''),44,476,21,'#fff4c8','left'); text(dn,VW-22-230-14,476,15,'#ffcf8a','right');
   if(lock) text('Terkunci. Selesaikan level '+levelName(i-1)+' dulu.',44,506,15,'#b8a890','left','400');
-  else if(!(best&&best.done)) text(cf.desc,44,506,15,'#8fb4a0','left','italic 400');
+  else if(!(best&&best.done)) text(storyLine(i),44,506,14,'#8fb4a0','left','italic 400');
   else if(best&&best.done){ for(let q=0;q<3;q++) drawIcon('star',44+q*24,494,22,q<(best.stars||1)?1:.2); text('Skor '+best.score+(SAVE.times[i]?'  ·  Waktu '+fmtT(SAVE.times[i]):'')+'  ·  '+cf.desc,150,506,13,'#cfe8d0','left','400'); }
   btn('play',VW-22-230,462,214,52,lock?'Terkunci':'Main','flag',{nav:false,sel:!lock,dim:lock,size:24});
   if(!IS_TOUCH) text('← → ↑ ↓ pilih   Enter main   C ganti karakter   Esc kembali',VW/2,VH-6,11,'#6f9480','center','400');
@@ -1671,6 +1778,39 @@ const PV={
  warrior:{sc:1.12,idle:['war_idle',10,WAR_AX,WAR_AY],run:['war_run',8,WAR_AX,WAR_AY],atk:['war_a1',7,WAR_AX,WAR_AY]},
  huntress:{sc:1.5,idle:['hun_idle',10,HUN_AX,HUN_AY],run:['hun_run',8,HUN_AX,HUN_AY],atk:['hun_atk',6,HUN_AX,HUN_AY]},
  satyr:{sc:2.3,idle:['sat_idle',6,SAT_AX,SAT_AY],run:['sat_run',8,SAT_AX,SAT_AY],atk:['sat_nova',7,SAT_AX,SAT_AY]}};
+function splitLines(str,w,size){
+  ctx.font=`italic 400 ${size}px Georgia,serif`; const words=str.split(' '), out=[]; let line='';
+  for(const wd of words){ const t=line?line+' '+wd:wd; if(ctx.measureText(t).width>w&&line){ out.push(line); line=wd; } else line=t; }
+  if(line) out.push(line); return out;
+}
+function drawShardGem(x,y,r,col,a=1){
+  ctx.save(); ctx.globalAlpha=a;
+  ctx.globalCompositeOperation='lighter'; const g=ctx.createRadialGradient(x,y,1,x,y,r*2.6); g.addColorStop(0,col+'aa'); g.addColorStop(1,col+'00'); ctx.fillStyle=g; ctx.fillRect(x-r*2.6,y-r*2.6,r*5.2,r*5.2);
+  ctx.globalCompositeOperation='source-over';
+  ctx.beginPath(); ctx.moveTo(x,y-r*1.25); ctx.lineTo(x+r*.8,y); ctx.lineTo(x,y+r*1.25); ctx.lineTo(x-r*.8,y); ctx.closePath();
+  ctx.fillStyle=col; ctx.fill(); ctx.lineWidth=2; ctx.strokeStyle='#fff'; ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x,y-r*1.25); ctx.lineTo(x+r*.8,y); ctx.lineTo(x,y); ctx.closePath(); ctx.fillStyle='rgba(255,255,255,.35)'; ctx.fill();
+  ctx.restore();
+}
+function drawStory(){
+  const st=S.story; if(!st) return; const c=st.c, last=st.i===st.pages.length-1, pg=st.pages[st.i];
+  useTheme(c); drawMenuScene(); ctx.fillStyle='rgba(2,8,8,.58)'; ctx.fillRect(0,0,VW,VH);
+  S.ui.push({id:'snext',x:0,y:0,w:VW,h:VH});
+  spaced(st.kind==='intro'?'BAB '+(c+1):'BAB '+(c+1)+' SELESAI',VW/2,66,20,'#ffe39a',6);
+  text(CHAPTERS[c].name,VW/2,112,44,'#fff4c8','center');
+  for(let k=0;k<5;k++){ const got=k<c||(k===c&&st.kind==='outro'); drawShardGem(VW/2+(k-2)*70,194+Math.sin(S.t*2+k)*3,got?20:15,got?CHAPTERS[k].shard.col:'#5a6a64',got?1:.45); }
+  text(st.kind==='outro'?'Serpihan '+CHAPTERS[c].shard.name+' terkumpul':'Serpihan '+CHAPTERS[c].shard.name+' menunggu',VW/2,246,15,'#cfe8d0','center','italic 400');
+  const bx=60,by=282,bw=VW-120,bh=170;
+  ctx.fillStyle='rgba(3,14,12,.9)'; ctx.strokeStyle=pg[0]==='Lumi'?'#ffe39a':pg[0]?'#ff9ab0':'#6fb98a'; ctx.lineWidth=2.5; ctx.beginPath(); ctx.roundRect(bx,by,bw,bh,18); ctx.fill(); ctx.stroke();
+  let ty=by+38;
+  if(pg[0]){ if(pg[0]==='Lumi'){ ctx.save(); ctx.globalCompositeOperation='lighter'; const g=ctx.createRadialGradient(bx+34,ty-6,1,bx+34,ty-6,16); g.addColorStop(0,'#fff6c0'); g.addColorStop(1,'rgba(255,220,120,0)'); ctx.fillStyle=g; ctx.fillRect(bx+14,ty-26,40,40); ctx.restore(); }
+    text(pg[0],bx+(pg[0]==='Lumi'?56:28),ty-6,18,pg[0]==='Lumi'?'#ffe39a':'#ff9ab0','left'); ty+=28; } else ty+=6;
+  const ls=splitLines(pg[1],bw-56,20); let n=Math.floor(st.ch);
+  ls.forEach((l,k)=>{ const sh=l.slice(0,Math.max(0,n)); n-=l.length+1; if(sh) text(sh,bx+28,ty+k*28,20,'#e6f6d8','left','italic 400'); });
+  for(let k=0;k<st.pages.length;k++){ ctx.fillStyle=k===st.i?'#ffe39a':'rgba(200,230,210,.3)'; ctx.beginPath(); ctx.arc(VW/2+(k-(st.pages.length-1)/2)*16,by+bh+20,4,0,6.283); ctx.fill(); }
+  btn('sskip',60,VH-62,150,44,'Lewati',null,{nav:false,size:18});
+  btn('snext',VW-60-230,VH-66,230,50,last?(st.kind==='intro'?'Mulai':c<4?'Lanjut':'Tamat'):'Lanjut','flag',{nav:false,sel:true,size:22});
+}
 function wrapText(str,x,y,w,size,col,lh){
   ctx.font=`400 ${size}px Georgia,serif`; const words=str.split(' '); let line='',yy=y;
   for(const wd of words){ const t=line?line+' '+wd:wd; if(ctx.measureText(t).width>w&&line){ text(line,x,yy,size,col,'left','400'); yy+=lh; line=wd; } else line=t; }
@@ -1763,16 +1903,18 @@ function render(){
   else if(S.mode==='levels'){ drawLevelGrid(); }
   else if(S.mode==='shop'){ drawShop(); }
   else if(S.mode==='chars'){ drawChars(); }
+  else if(S.mode==='story'){ drawStory(); }
   else if(S.mode==='achs'){ drawAchs(); }
   else {
     ctx.save();
     if(S.shake>0) ctx.translate((Math.random()-.5)*S.shake*30,(Math.random()-.5)*S.shake*30);
-    drawWorld(); drawFore(); ctx.restore();
+    drawWorld(); drawFore(); drawBossDark(); ctx.restore();
     drawHUD();
     if(S.mode==='clear'){
       const coinsGot=S.coins-S.coinsStart, gemsGot=S.gems-S.gemsStart, last=S.level+1>=TOTAL, ends=!S.daily&&lvOf(S.level)===PER-1, stars='★'.repeat(S.starsGot)+'☆'.repeat(3-S.starsGot);
       const reward='Hadiah: +'+Math.round(S.clearBonusBank||0)+' koin'+(S.newRecord?'   ·   Rekor waktu baru!':ends?'   ·   Bintang bab: '+chProgress(chOf(S.level)).stars+'/60':'');
-      const L5=[stars,`Koin: ${coinsGot} / ${S.levelCoins}   Permata: ${gemsGot}`,`Waktu: ${fmtT(S.time)}   Bonus waktu: +${S.bonus}`,`Skor: ${S.score}`,reward];
+      const tz=S.daily?'':ends?(last?'Semua serpihan telah terkumpul...':'Serpihan '+CHAPTERS[chOf(S.level)].shard.name+' berhasil direbut!'):'\u201c'+beatOf(S.level+1).txt+'\u201d';
+      const L5=[stars,`Koin: ${coinsGot} / ${S.levelCoins}   Permata: ${gemsGot}`,`Waktu: ${fmtT(S.time)}   Bonus: +${S.bonus}   Skor: ${S.score}`,reward,tz];
       if(S.daily) panelBtns('HARIAN SELESAI!',L5,[['retry','Main Lagi','sword'],['menu','Menu Utama','flag']]);
       else panelBtns(ends?'BAB SELESAI!':'LEVEL SELESAI!',L5,[['next',last?'Selesaikan Petualangan':ends?'Lanjut ke Bab '+(chOf(S.level)+2):'Level Berikutnya','flag'],['retry','Ulangi Level','sword'],['lvls','Menu Level','star']]);
     } else if(S.mode==='over'){
